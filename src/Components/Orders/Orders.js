@@ -31,10 +31,20 @@ function Orders() {
             </tr>
           </thead>
           <tbody>
-            {orderData &&
+            {orderData ? (
               orderData.map((data) => (
                 <SingleOrder key={data._id} order={data}></SingleOrder>
-              ))}
+              ))
+            ) : (
+              <div className="w-25 mx-auto mt-5">
+                <div
+                  className="spinner-border text-primary ml-5 spinner"
+                  role="status"
+                >
+                  <span className="sr-only">Loading...</span>
+                </div>
+              </div>
+            )}
           </tbody>
         </Table>
       </Container>
