@@ -28,7 +28,7 @@ function CheckOut() {
       order_date: new Date().toISOString().slice(0, 10),
     };
     console.log(orderData);
-    fetch("http://localhost:5000/orders", {
+    fetch("https://rainbow-books303.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",
