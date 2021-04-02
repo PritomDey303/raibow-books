@@ -59,14 +59,14 @@ function CheckOut() {
               <tr>
                 <td>{name}</td>
                 <td>{quantity}</td>
-                <td>${price}</td>
+                <td>Tk.{price}</td>
               </tr>
               <tr>
                 <td colSpan={2}>
                   <h4>Total Price:</h4>
                 </td>
                 <td>
-                  <h4>${price}</h4>
+                  <h4>Tk.{price}</h4>
                 </td>
               </tr>
             </tbody>
