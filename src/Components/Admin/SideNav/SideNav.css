@@ -1,0 +1,17 @@
+.sideNav {
+  height: 100vh;
+  width: 100%;
+}
+.sideLink {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 5px 10px;
+}
+.sideNavLinks svg {
+  font-weight: bold;
+}
+@media screen and (max-width: 575px) {
+  .sideNav {
+    height: 60vh;
+  }
+}
