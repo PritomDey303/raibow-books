@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { Container, Table } from "react-bootstrap";
 import { BookContext } from "../../App";
 import Navigation from "../Navigation/Navigation";
+import "./Orders.css";
 import SingleOrder from "./SIngleOrder/SingleOrder";
-
 function Orders() {
   const [orderData, setOrderData] = useState();
   const [, , LoggedInUser] = useContext(BookContext);
@@ -36,9 +36,10 @@ function Orders() {
                 <SingleOrder key={data._id} order={data}></SingleOrder>
               ))
             ) : (
-              <div className="w-25 mx-auto mt-5">
+              <div className="w-100 mt-5">
                 <div
-                  className="spinner-border text-primary ml-5 spinner"
+                  className="spinner-border text-primary "
+                  style={{ marginLeft: "120%" }}
                   role="status"
                 >
                   <span className="sr-only">Loading...</span>

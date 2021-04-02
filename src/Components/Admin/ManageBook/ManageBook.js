@@ -1,19 +1,30 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Container, Table } from "react-bootstrap";
 import { BookContext } from "../../../App";
 import ManageSingleBook from "./ManageSingleBook/ManageSingleBook";
 
 function ManageBook() {
-  const [bookInfo, , ,] = useContext(BookContext);
-
+  const [bookInfo, setBookInfo, ,] = useContext(BookContext);
+  useEffect(() => {
+    fetch("https://rainbow-books303.herokuapp.com/books")
+      .then((res) => res.json())
+      .then((data) => {
+        setBookInfo(data);
+      });
+  }, [setBookInfo]);
   const handleDelete = (id, event) => {
-    const deleteBook = event.target.parentNode.parentNode;
+    console.log(id);
+    const newArr = bookInfo.filter((book) => book._id !== id);
     fetch(`https://rainbow-books303.herokuapp.com/delete/${id}`, {
       method: "Delete",
     }).then((res) => {
-      deleteBook.remove();
+      if (res.ok) {
+        alert("Book successfully deleted.");
 
-      res && alert("Delete Successful.");
+        setBookInfo(newArr);
+      } else {
+        alert("Something is wrong.Try again.");
+      }
     });
   };
   return (

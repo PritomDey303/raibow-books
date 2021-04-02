@@ -4,9 +4,8 @@ import "./SideNav.css";
 function SideNav() {
   return (
     <div className="bg-primary sideNav py-5">
-      <Link to="/home">
-        <h2 className="text-center py-3 text-light">BOOK SHOP</h2>
-      </Link>
+      <h2 className="text-center py-3 text-light">Rainbow Books</h2>
+
       <div className="sideNavLinks text-center">
         <Link className="d-block sideLink text-light" to="/admin/managebooks">
           <svg

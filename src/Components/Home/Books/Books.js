@@ -30,11 +30,8 @@ function Books() {
 
       <Row className="my-5">
         {bookInfo.length === 0 ? (
-          <div className="w-25 mx-auto mt-5">
-            <div
-              className="spinner-border text-primary ml-5 spinner"
-              role="status"
-            >
+          <div className="w-25  mt-5 spinner">
+            <div className="spinner-border text-primary  " role="status">
               <span className="sr-only">Loading...</span>
             </div>
           </div>
