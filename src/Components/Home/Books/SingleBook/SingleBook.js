@@ -12,7 +12,7 @@ function SingleBook(props) {
           <Card.Title>{name}</Card.Title>
           <h5>By {author}</h5>
           <div className=" my-3 d-flex justify-content-between">
-            <h3>Price:${price}</h3>
+            <h3>Price:Tk.{price}</h3>
 
             <Link to={`/checkout/${_id}`}>
               <Button className="btn px-4" variant="primary">

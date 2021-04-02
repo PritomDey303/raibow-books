@@ -27,6 +27,8 @@ function Orders() {
               <th>Book Name</th>
               <th>Quantity</th>
               <th>Price</th>
+              <th>Delivery Address</th>
+              <th>Contact</th>
               <th>Date</th>
             </tr>
           </thead>
