@@ -97,9 +97,12 @@ function AddBook() {
             />
           </Form.Group>
         </Form.Row>
-        <button className="btn btn-primary ml-auto" type="submit">
+{ imageUrl ?   <button className="btn btn-primary ml-auto" type="submit" >
           Save
-        </button>
+        </button> :
+        <button className="btn btn-primary ml-auto" type="submit" disabled>
+          Save
+        </button> }
       </Form>
     </Container>
   );
